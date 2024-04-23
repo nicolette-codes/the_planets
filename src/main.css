@@ -1,0 +1,79 @@
+:root {
+	--font-base: 'League Spartan Variable', sans-serif;
+	--font-special: 'Antonio Variable', sans-serif;
+	--bg-color: hsl(240, 67%, 8%);
+	--font-color-base: hsl(0, 0%, 95%);
+	--color-mercury: hsl(196, 83%, 93%);
+	--color-venus: hsl(39, 88%, 73%);
+	--color-earth: hsl(238, 99%, 66%);
+	--color-mars: hsl(12, 100%, 64%);
+	--color-jupiter: hsl(27, 75%, 70%);
+	--color-saturn: hsl(40, 96%, 70%);
+	--color-uranus: hsl(168, 82%, 67%);
+	--color-neptune: hsl(222, 95%, 63%);
+	--color-sperator: hsl(0, 0%, 59%);
+	--color-highlight: hsl(194, 48%, 49%);
+	--spacing-base: 1.5rem;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+a {
+	text-decoration: none;
+	color: var(--font-color-base);
+}
+
+body {
+	background-color: var(--bg-color);
+	height: 100vh;
+	height: 100svh;
+	font-size: 1.6rem;
+	font-family: var(--font-base);
+	color: var(--font-color-base);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.color-mercury {
+	background-color: var(--color-mercury);
+}
+
+.color-venus {
+	background-color: var(--color-venus);
+}
+
+.color-earth {
+	background-color: var(--color-earth);
+}
+
+.color-mars {
+	background-color: var(--color-mars);
+}
+
+.color-jupiter {
+	background-color: var(--color-jupiter);
+}
+
+.color-saturn {
+	background-color: var(--color-saturn);
+}
+
+.color-uranus {
+	background-color: var(--color-uranus);
+}
+
+.color-neptune {
+	background-color: var(--color-neptune);
+}

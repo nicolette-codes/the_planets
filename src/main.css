@@ -33,6 +33,7 @@ a {
 
 body {
 	background-color: var(--bg-color);
+	background-image: url('/src/lib/assets/background-stars.svg');
 	height: 100vh;
 	height: 100svh;
 	font-size: 1.6rem;

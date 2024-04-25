@@ -1,7 +1,8 @@
 <script lang="ts">
-	import '@fontsource-variable/league-spartan';
-	import '@fontsource-variable/antonio';
+	import PlanetLayout from '$lib/components/PlanetLayout.svelte';
+	import type { Planet } from '$lib/types/planet';
+	import json from '$lib/data/data.json';
+	const planets: Planet[] = json;
 </script>
 
-<!-- <h1>Mercury</h1>
-	-->
+<PlanetLayout planet={planets[0]} />

@@ -39,57 +39,57 @@
 				<a href="/">
 					<span class="dot color-mercury" aria-hidden="true"></span>
 					Mercury
+					<span class="icon-caret" aria-hidden="true">&rsaquo;</span>
 				</a>
-				<span>&rsaquo;</span>
 			</li>
 			<li>
 				<a href="/venus">
-					<span class="dot color-venus"></span>
+					<span class="dot color-venus" aria-hidden="true"></span>
 					Venus
+					<span class="icon-caret" aria-hidden="true">&rsaquo;</span>
 				</a>
-				<span>&rsaquo;</span>
 			</li>
 			<li>
 				<a href="/earth">
-					<span class="dot color-earth"></span>
+					<span class="dot color-earth" aria-hidden="true"></span>
 					Earth
+					<span class="icon-caret" aria-hidden="true">&rsaquo;</span>
 				</a>
-				<span>&rsaquo;</span>
 			</li>
 			<li>
 				<a href="/mars">
-					<span class="dot color-mars"></span>
+					<span class="dot color-mars" aria-hidden="true"></span>
 					Mars
+					<span class="icon-caret" aria-hidden="true">&rsaquo;</span>
 				</a>
-				<span>&rsaquo;</span>
 			</li>
 			<li>
 				<a href="/jupiter">
-					<span class="dot color-jupiter"></span>
+					<span class="dot color-jupiter" aria-hidden="true"></span>
 					Jupiter
+					<span class="icon-caret" aria-hidden="true">&rsaquo;</span>
 				</a>
-				<span>&rsaquo;</span>
 			</li>
 			<li>
 				<a href="/saturn">
-					<span class="dot color-saturn"></span>
+					<span class="dot color-saturn" aria-hidden="true"></span>
 					Saturn
+					<span class="icon-caret" aria-hidden="true">&rsaquo;</span>
 				</a>
-				<span>&rsaquo;</span>
 			</li>
 			<li>
 				<a href="/uranus">
-					<span class="dot color-uranus"></span>
+					<span class="dot color-uranus" aria-hidden="true"></span>
 					Uranus
+					<span class="icon-caret" aria-hidden="true">&rsaquo;</span>
 				</a>
-				<span>&rsaquo;</span>
 			</li>
 			<li>
 				<a href="/neptune">
-					<span class="dot color-neptune"></span>
+					<span class="dot color-neptune" aria-hidden="true"></span>
 					Neptune
+					<span class="icon-caret" aria-hidden="true">&rsaquo;</span>
 				</a>
-				<span>&rsaquo;</span>
 			</li>
 		</ul>
 	</nav>
@@ -122,11 +122,14 @@
 	}
 
 	.navigation {
+		background-color: var(--bg-color);
+		background-image: url('/src/lib/assets/background-stars.svg');
 		position: absolute;
-		left: var(--spacing-base);
-		right: var(--spacing-base);
+		left: 0;
+		right: 0;
 		top: 100%;
 		list-style: none;
+		z-index: 999;
 	}
 
 	.navigation[data-state='closed'] {
@@ -134,22 +137,15 @@
 	}
 
 	.site-nav li {
-		display: flex;
-		justify-content: space-between;
 		border-bottom: 0.1rem solid var(--color-sperator);
-		padding: 3rem var(--spacing-base);
 		font-weight: 700;
 		font-size: 2rem;
 	}
 
-	.site-nav li:last-child {
-		border-bottom: none;
-	}
-
 	.site-nav a {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		padding: 3rem var(--spacing-base);
+		display: grid;
+		grid-template-columns: 4rem 1fr 1rem;
 		text-decoration: none;
 	}
 
@@ -211,6 +207,10 @@
 		border-radius: 50%;
 	}
 
+	.icon-caret {
+		float: right;
+	}
+
 	@media screen and (min-width: 768px) {
 		header {
 			display: flex;
@@ -231,13 +231,15 @@
 		}
 
 		.site-nav li {
-			border-bottom: 0;
 			font-size: 1.3rem;
+			border-bottom: 0.4rem solid transparent;
+			border-top: 0.4rem solid transparent;
 		}
 
 		.site-nav li:hover,
 		.site-nav li:focus {
 			background-color: initial;
+			border-top: 0.4rem solid transparent;
 			border-bottom: 0.4rem solid var(--color-highlight);
 		}
 
@@ -245,10 +247,6 @@
 			display: flex;
 			position: static;
 			list-style: none;
-		}
-
-		.navigation li > span {
-			display: none;
 		}
 
 		.navigation a > span {
@@ -261,11 +259,16 @@
 			display: block;
 		}
 
+		.site-nav {
+			border-top: 0.4rem solid transparent;
+			border-bottom: 0.4rem solid transparent;
+		}
+
 		.site-nav li:hover,
 		.site-nav li:focus {
 			background-color: initial;
-			border-bottom: 0;
 			border-top: 0.4rem solid var(--color-highlight);
+			border-bottom: 0.4rem solid transparent;
 		}
 	}
 </style>

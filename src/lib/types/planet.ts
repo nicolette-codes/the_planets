@@ -1,7 +1,7 @@
 export interface Planet {
 	name: string;
 	overview: Info;
-	structure: Info;
+	internal: Info;
 	geology: Info;
 	rotation: string;
 	revolution: string;
@@ -16,7 +16,7 @@ export interface Info {
 }
 
 export interface Images {
-	planet: string;
+	overview: string;
 	internal: string;
 	geology: string;
 }

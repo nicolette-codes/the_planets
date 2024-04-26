@@ -34,4 +34,15 @@
 		font-size: 2rem;
 		font-family: var(--font-special);
 	}
+
+	@media screen and (min-width: 768px) {
+		.stat {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: initial;
+		}
+		.stat:not(:last-child) {
+			margin-bottom: 0;
+		}
+	}
 </style>
